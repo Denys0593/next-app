@@ -2,26 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* body {
+  background: url(../public/main.jpg) center center/cover no-repeat;
+} */
+
+.background__wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.background__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  z-index: 1;
+  position: relative;
+  max-width: 15rem;
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+button {
+  border-radius: 8px;
+  display: inline-block;
+  padding: 8px;
+  min-width: 4rem;
+  margin-top: 15px;
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.mainDiv {
+  margin: 2rem 0 0 2rem;
+}
+
+.blue {
+  background-color: rgba(41, 20, 231, 0.781);
+  color: #fff;
+}
+
+.yellow {
+  background-color: rgba(194, 235, 12, 0.781);
 }

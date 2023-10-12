@@ -1,0 +1,39 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.buttonShowNav {
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.ulNav {
+  min-width: 11rem;
+  height: 100%;
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.big {
+  font-size: 24px;
+  padding: 0;
+  min-width: 2rem;
+  color: #fff;
+  position: absolute;
+  top: -14px;
+  left: 175px;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    box-shadow: none;
+  }
+}
