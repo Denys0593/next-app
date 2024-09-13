@@ -53,6 +53,11 @@ export default function Navigation() {
               <Link href="/people">People</Link>
             </button>
           </li>
+          <li>
+            <button className="yellow">
+              <Link href="/starships">Starships</Link>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>

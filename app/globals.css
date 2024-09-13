@@ -24,7 +24,8 @@
 nav {
   z-index: 1;
   position: relative;
-  max-width: 15rem;
+  min-width: 11rem;
+  max-width: 23rem;
 }
 
 h2 {

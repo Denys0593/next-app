@@ -1,15 +1,12 @@
-import { getVehicle } from "@/app/actions/getVehicle";
-import Vehicle from "@/components/Vehicle";
+import { getStarship } from "@/app/actions/getStarship";
+import BuildStarShip from "./BuildStarShip";
 import Link from "next/link";
-
-interface Props {
-  params: {
-    uid: number;
-  };
+interface Prop {
+  uid: number;
 }
 
-export default async function SingleVehicle({ params: { uid } }: Props) {
-  const vehicle = await getVehicle(uid);
+export default async function Starship({ uid }: Prop) {
+  const starship = await getStarship(uid);
 
   return (
     <div
@@ -17,9 +14,10 @@ export default async function SingleVehicle({ params: { uid } }: Props) {
         zIndex: 1,
         position: "relative",
         padding: "15px 0 0 35px",
+        color: "#fff",
       }}
     >
-      <Vehicle vehicle={vehicle} />
+      <BuildStarShip starship={starship} />
       <div
         style={{
           margin: "15px 0 0 15px",
@@ -28,8 +26,8 @@ export default async function SingleVehicle({ params: { uid } }: Props) {
           justifyContent: "space-between",
         }}
       >
-        <Link href="/vehicles">
-          <button className="yellow">Back to Vehicles</button>
+        <Link href="/starships">
+          <button className="yellow">Back to Starships</button>
         </Link>
         <Link href="/">
           <button className="yellow">Home</button>

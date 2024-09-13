@@ -1,7 +1,5 @@
-import { VehiclesResponse } from "../types";
-
 export async function getAllVehicles(): Promise<VehiclesResponse> {
-  return await fetch("https://www.swapi.tech/api/vehicles/").then((res) =>
-    res.json()
+  return await fetch("https://swapi.tech/api/vehicles?page=1&limit=39").then(
+    (res) => res.json()
   );
 }

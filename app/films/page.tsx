@@ -23,7 +23,7 @@ export default async function FilmsPage() {
             key={film._id}
           >
             <Link
-              className="mt-3 max-w-max display: block hover:text-lg"
+              className="mt-3 max-w-max display: block hover:text-sm hover:text-cyan-100"
               href={`/films/${film.uid}`}
             >
               {film.properties.title}

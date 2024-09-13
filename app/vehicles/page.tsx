@@ -20,13 +20,13 @@ export default async function Vehicles() {
         className="max-w-md space-y-1 text-orange-100 list-disc list-inside dark:text-gray-400"
         style={{ listStyle: "none" }}
       >
-        {vehicles.results.map((item: any) => (
+        {vehicles.results.slice(0, 6).map((item: any) => (
           <li key={item.id} className="ml-4 hover:underline underline-offset-4">
             <Link
               href={{
                 pathname: `/vehicles/${item.uid}`,
               }}
-              className="mt-3 max-w-max display: block hover:text-lg"
+              className="mt-3 max-w-max display: block hover:text-sm hover:text-cyan-100"
             >
               {item.name}
             </Link>

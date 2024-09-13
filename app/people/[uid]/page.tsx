@@ -6,6 +6,6 @@ interface Props {
   };
 }
 
-export default function PersonLink({ params: { uid } }: Props) {
+export default async function PersonLink({ params: { uid } }: Props) {
   return <Person prop={uid} />;
 }

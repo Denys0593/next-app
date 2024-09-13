@@ -1,35 +1,35 @@
-import { getAllPeople } from "@/app/actions/getAllPeople";
+import { getAllStarships } from "@/app/actions/getAllStarships";
 import Link from "next/link";
 
-export default async function People() {
-  const people = await getAllPeople();
+export default async function Starships() {
+  const starships = await getAllStarships();
 
   return (
     <div
       className="container mainDiv"
       style={{ zIndex: 1, position: "relative" }}
     >
-      <h2>Characters:</h2>
+      <h2>Starships:</h2>
       <ul
         className="max-w-md space-y-1 text-orange-100 list-none list-inside dark:text-gray-400"
         style={{ listStyle: "none" }}
       >
-        {people.results.slice(0, 6).map((person: any) => (
+        {starships.results.slice(0, 6).map((ship: any) => (
           <li
-            key={person.uid}
+            key={ship.uid}
             className="ml-4 hover:underline underline-offset-4"
           >
             <Link
-              href={`/people/${person.uid}`}
+              href={`starships/${ship.uid}`}
               className="mt-3 max-w-max display: block hover:text-sm hover:text-cyan-100"
             >
-              {person.name}
+              {ship.name}
             </Link>
           </li>
         ))}
       </ul>
       <Link href="/">
-        <button className="blue">Home</button>
+        <button className="yellow">Home</button>
       </Link>
     </div>
   );
